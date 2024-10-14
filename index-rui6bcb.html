@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from webmail.bell.net/bell/index-rui.jsp?v=3.1.3.54.0-3 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Oct 2024 18:35:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" /><!-- /Added by HTTrack -->
+<head><script src="../static/bell_common.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <link rel="shortcut icon" href="#" />
+    <link rel="icon" href="#" /> 
+    <link rel="apple-touch-icon" href="#" />    
+    
+
+
+
+<script language="Javascript1.1">
+    window.contextPath = '/bell';
+
+    function getBootstrapConfig() {
+        /**
+         *  transform bootstrap infomation
+         * */
+        function transform(obj) {
+            var result = {}
+            var isArray = function(obj) {
+                return Object.prototype.toString.call(obj) ===  '[object Array]'
+            }
+            var isObject = function(obj) {
+                return Object.prototype.toString.call(obj) ===  '[object Object]'
+            }
+            var parseChildren = function(arr) {
+                var result = {}
+                arr.forEach(function(cObj) {
+                    if (result[cObj.name] && !isArray(result[cObj.name])) {
+                        result[cObj.name] = [result[cObj.name]]
+                        result[cObj.name].push(getObject(cObj))
+                    } else if (result[cObj.name] && isArray(result[cObj.name])) {
+                        result[cObj.name].push(getObject(cObj))
+                    } else {
+                        if (cObj.name === 'input') { // specail for section of contact form
+                            result[cObj.name] = [getObject(cObj)]
+                        } else {
+                            result[cObj.name] = getObject(cObj)
+                        }
+                    }
+                })
+                return result
+            }
+            var getObject = function(obj) {
+                var temp = {}
+                if (obj.name && obj.children) {
+                    var v = parseChildren(obj.children)
+                    if (isArray(v)) {
+                        if (Object.keys(obj).length > 2) {
+                            temp = obj
+                            temp.children = v
+                        } else {
+                            temp[obj.name] = v
+                        }
+                    } else if (isObject(v)) {
+                        temp = v
+                    }
+                }
+                if (obj.attrs && obj.text) {
+                    Object.assign(temp, obj.attrs)
+                    temp.text = obj.text
+                } else if (obj.attrs) {
+                    Object.assign(temp, obj.attrs)
+                } else if (obj.text) {
+                    if (Object.keys(temp).length) {
+                        temp.text = obj.text
+                    } else {
+                        temp = obj.text
+                    }
+                }
+                return temp
+            }
+            Object.keys(obj).forEach(function(k) {
+                if (isObject(obj[k])) {
+                    if (obj[k].name === k && obj[k].children) {
+                        result[k] = getObject(obj[k])
+                    } else {
+                        result[k] = transform(obj[k])
+                    }
+                } else {
+                    result[k] = obj[k]
+                }
+            })
+            return result
+        }
+        return transform({
+  "calendar" : {
+    "maxcalendarnamelength" : 64,
+    "maxuploadbytes" : 5242880,
+    "maxeventnamelength" : 64,
+    "rsvpEnabled" : true,
+    "allowCalDomain" : "mirapoint.qa.laszlosystems.com,test.com",
+    "dayend" : 18,
+    "maxeventnoteslength" : 4096,
+    "recurrence" : {
+      "children" : [ {
+        "name" : "repeat",
+        "attrs" : {
+          "label" : "Locale.calendar.editorView.recurrence.NEVER",
+          "value" : "never"
+        }
+      }, {
+        "name" : "repeat",
+        "attrs" : {
+          "label" : "Locale.calendar.editorView.recurrence.DAILY",
+          "value" : "daily"
+        }
+      }, {
+        "name" : "repeat",
+        "attrs" : {
+          "label" : "Locale.calendar.editorView.recurrence.WEEKLY",
+          "value" : "weekly"
+        }
+      }, {
+        "name" : "repeat",
+        "attrs" : {
+          "label" : "Locale.calendar.editorView.recurrence.MONTHLY",
+          "value" : "monthly"
+        }
+      }, {
+        "name" : "repeat",
+        "attrs" : {
+          "label" : "Locale.calendar.editorView.recurrence.YEARLY",
+          "value" : "yearly"
+        }
+      } ],
+      "name" : "recurrence"
+    },
+    "daystart" : 8,
+    "weekstart" : 7,
+    "enableFreeBusyStatus" : false,
+    "maxRepSingleEvent" : 50,
+    "showpublishedcalendar" : true,
+    "maxsubscriptions" : 10,
+    "showsharedcalendar" : true
+  },
+  "extensionnametypemap" : {
+    "extensionNameTypeMap" : {
+      "children" : [ {
+        "children" : [ {
+          "name" : "extensionNames",
+          "text" : "jpg,jpeg"
+        } ],
+        "name" : "item",
+        "attrs" : {
+          "preview" : "true",
+          "transcode" : "false",
+          "type" : "img_generic"
+        }
+      }, {
+        "children" : [ {
+          "name" : "extensionNames",
+          "text" : "png"
+        } ],
+        "name" : "item",
+        "attrs" : {
+          "preview" : "true",
+          "transcode" : "false",
+          "type" : "img_png"
+        }
+      }, {
+        "children" : [ {
+          "name" : "extensionNames",
+          "text" : "gif"
+        } ],
+        "name" : "item",
+        "attrs" : {
+          "preview" : "true",
+          "transcode" : "false",
+          "type" : "img_gif"
+        }
+      }, {
+        "children" : [ {
+          "name" : "extensionNames",
+          "text" : "psd"
+        } ],
+        "name" : "item",
+        "attrs" : {
+          "preview" : "false",
+          "transcode" : "false",
+          "type" : "psd"
+        }
+      }, {
+        "children" : [ {
+          "name" : "extensionNames",
+          "text" : "doc,docm,docx,dotm,dotx,rtf,xlt"
+        } ],
+        "name" : "item",
+        "attrs" : {
+          "preview" : "true",
+          "transcode" : "true",
+          "type" : "doc"
+        }
+      }, {
+        "children" : [ {
+          "name" : "extensionNames",
+          "text" : "txt"
+        } ],
+        "name" : "item",
+        "attrs" : {
+          "preview" : "true",
+          "transcode" : "true",
+          "type" : "txt"
+        }
+      }, {
+        "children" : [ {
+          "name" : "extensionNames",
+          "text" : "ppt,pot,potm,potx,pps,pptx"
+        } ],
+        "name" : "item",
+        "attrs" : {
+          "preview" : "true",
+          "transcode" : "true",
+          "type" : "ppt"
+        }
+      }, {
+        "children" : [ {
+          "name" : "extensionNames",
+          "text" : "xls,xlsb,xlsm,xlsx,xlt,xltm,xltx,xlw"
+        } ],
+        "name" : "item",
+        "attrs" : {
+          "preview" : "true",
+          "transcode" : "true",
+          "type" : "sheets"
+        }
+      }, {
+        "children" : [ {
+          "name" : "extensionNames",
+          "text" : "pdf"
+        } ],
+        "name" : "item",
+        "attrs" : {
+          "preview" : "true",
+          "transcode" : "true",
+          "type" : "pdf"
+        }
+      }, {
+        "children" : [ {
+          "name" : "extensionNames",
+          "text" : "java"
+        } ],
+        "name" : "item",
+        "attrs" : {
+          "preview" : "true",
+          "transcode" : "true",
+          "type" : "java"
+        }
+      }, {
+        "children" : [ {
+          "name" : "extensionNames",
+          "text" : "eml"
+        } ],
+        "name" : "item",
+        "attrs" : {
+          "preview" : "true",
+          "type" : "eml"
+        }
+      }, {
+        "children" : [ {
+          "name" : "extensionNames",
+          "text" : "ics"
+        } ],
+        "name" : "item",
+        "attrs" : {
+          "preview" : "true",
+          "type" : "ics"
+        }
+      }, {
+        "children" : [ {
+          "name" : "extensionNames",
+          "text" : "vcf"
+        } ],
+        "name" : "item",
+        "attrs" : {
+          "preview" : "false",
+          "type" : "vcf"
+        }
+      }, {
+        "children" : [ {
+          "name" : "extensionNames",
+          "text" : "mp3,wav"
+        } ],
+        "name" : "item",
+        "attrs" : {
+          "preview" : "false",
+          "type" : "audio"
+        }
+      }, {
+        "children" : [ {
+          "name" : "extensionNames",
+          "text" : "mov"
+        } ],
+        "name" : "item",
+        "attrs" : {
+          "preview" : "false",
+          "type" : "mov"
+        }
+      }, {
+        "children" : [ {
+          "name" : "extensionNames",
+          "text" : "mp4,3gp,3g2,mpeg,avi"
+        } ],
+        "name" : "item",
+        "attrs" : {
+          "preview" : "false",
+          "type" : "video"
+        }
+      }, {
+        "children" : [ {
+          "name" : "extensionNames",
+          "text" : "zip,rar,7z,tar,iso"
+        } ],
+        "name" : "item",
+        "attrs" : {
+          "preview" : "false",
+          "type" : "zip"
+        }
+      }, {
+        "children" : [ {
+          "name" : "extensionNames",
+          "text" : "exe"
+        } ],
+        "name" : "item",
+        "attrs" : {
+          "preview" : "false",
+          "type" : "exe"
+        }
+      }, {
+        "children" : [ {
+          "name" : "extensionNames",
+          "text" : "mms"
+        } ],
+        "name" : "item",
+        "attrs" : {
+          "preview" : "false",
+          "type" : "mms"
+        }
+      }, {
+        "children" : [ {
+          "name" : "extensionNames",
+          "text" : "xml"
+        } ],
+        "name" : "item",
+        "attrs" : {
+          "preview" : "true",
+          "transcode" : "true",
+          "type" : "xml"
+        }
+      }, {
+        "children" : [ {
+          "name" : "extensionNames",
+          "text" : "csv"
+        } ],
+        "name" : "item",
+        "attrs" : {
+          "preview" : "true",
+          "transcode" : "true",
+          "type" : "csv"
+        }
+      } ],
+      "name" : "extensionNameTypeMap"
+    }
+  },
+  "common" : {
+    "mediastreamerappname" : "/mediastreamer/voicemail/",
+    "helpurlfortouch" : "",
+    "concurrentLoginLimitEnabled" : true,
+    "feedbacktarget" : "",
+    "defaultDateFormat" : "MM/DD/YYYY",
+    "showTasksApp" : true,
+    "helpurl" : "",
+    "userInactiveTimeout" : 120000,
+    "logourl" : "",
+    "skins" : {
+      "name" : "skins"
+    },
+    "mediastreamerport" : "8080",
+    "advertisementLink" : "",
+    "redirectLoginUrl" : "",
+    "mediastreamer" : "localhost",
+    "searchResultTargetWindowName" : "searchResult",
+    "showLanguageSetting" : false,
+    "warnBeforeTokenExpiresTime" : 120000,
+    "redirectTimeoutUrl" : "http://webmail.bell.net/bell/",
+    "redirectLogoutUrl" : "http://webmail.bell.net/bell/",
+    "showDateFormat" : false,
+    "minuteScale" : 5,
+    "userDomain" : "",
+    "dataValidation" : {
+      "children" : [ {
+        "name" : "phone",
+        "attrs" : {
+          "regexp" : "^[\\w-#\\(\\)\\+\\/\\.\\*]{0,20}$"
+        }
+      }, {
+        "name" : "pager",
+        "attrs" : {
+          "regexp" : "^[0-9]{0,50}$"
+        }
+      } ],
+      "name" : "dataValidation"
+    },
+    "services" : "mail.vacationMessage-json,notification-json,mail.message-json,mail,datastore,user.loginhistory-json,serviceProfile-json,mediaTranscoderErrorReporter,tag-json,mail.mobileSignature-json,calendar.share-json,security.spam-json,mail.folder-json,mail.category.message-json,log-json,mailFilter,mailSignature,mobileMailSignature,captcha-json,mail.externalAccount-json,mailVacationMessage,mail.trustedSender-json,version-json,auth-json,clientconfig-json,calendar.toDo-json,calendar-json,trustedsender,mail.signature-json,blockedsender,mailAlias,mail.vacationMessage2-json,mail.alias-json,storage.account-json,calendar.preference-json,device-json,mail.userControls-json,mailExternalAccount.oauth2code-json,mail.message.tag-json,calendar.reminderaddress-json,mail.preference-json,storage.file-json,contacts.addressBook-json,mailPreference,bootstrap-json,sms-json,mailJunkPreference,mail.message.attachment-json,auth.nc-json,resource-json,noop-json,calendar.taskList-json,allowedsender,mailExternalAccount,mail.blockedSender-json,user-json,metrics-json,mail.junkPreference-json,user.session-json,storage.authentication-json,contacts-json,api-json,pickup-json,mailForwarding,calendar,calendar.event-json,datastore-json,oembed,storage.folder-json,mail.attachmentView-json,smsAccount-json,user.securitytracking-json,prefs,mail.collectedAddress-json,mail.allowedSender-json,prefs-json,fileUpload-json,user.profile-json,officePreview-json,timezone-json,mail.filter-json,mail.forwarding-json,health-json",
+    "failedLoginLimit" : -1,
+    "adRotationInterval" : 30000,
+    "defaultTimeZone" : "America/Toronto",
+    "fileTypesDisplayAudioPlayer" : {
+      "children" : [ {
+        "name" : "Firefox",
+        "text" : "ogg"
+      }, {
+        "name" : "Safari",
+        "text" : "mpeg,mp3"
+      }, {
+        "name" : "IE",
+        "text" : "mpeg,mp3"
+      }, {
+        "name" : "Chrome",
+        "text" : "mpeg,mp3"
+      } ],
+      "name" : "fileTypesDisplayAudioPlayer"
+    },
+    "footerLinks" : {
+      "children" : [ {
+        "name" : "link",
+        "attrs" : {
+          "href" : "http://www.cp.net/emailmanagement",
+          "text" : "MANAGE_YOUR_MAIL"
+        }
+      }, {
+        "name" : "link",
+        "attrs" : {
+          "href" : "http://www.cp.net/contact",
+          "text" : "CONTACT_US"
+        }
+      }, {
+        "name" : "link",
+        "attrs" : {
+          "href" : "http://www.cp.net/feedback",
+          "text" : "SEND_US_FEEDBACK"
+        }
+      }, {
+        "name" : "link",
+        "attrs" : {
+          "href" : "http://www.cp.net/privacy-policy",
+          "text" : "PRIVACY_POLICY"
+        }
+      }, {
+        "name" : "link",
+        "attrs" : {
+          "href" : "http://www.cp.net/terms-and-conditions",
+          "text" : "TERMS_CONDITIONS"
+        }
+      }, {
+        "name" : "link",
+        "attrs" : {
+          "href" : "help/touch/index.html",
+          "text" : "HELP"
+        }
+      } ],
+      "name" : "footerLinks"
+    },
+    "windowStateSaveDelay" : -1,
+    "desktopappurl" : "index.jsp"
+  },
+  "mail" : {
+    "autoSaveTime" : 60000,
+    "maxallowedsenders" : 1200,
+    "vacationMessageReplyOption" : false,
+    "maxblockedsenders" : 1200,
+    "maxuploadbytes" : 5242880,
+    "emailMaximum" : 307200,
+    "specialFolders" : {
+      "children" : [ {
+        "name" : "inbox",
+        "attrs" : {
+          "name" : "Inbox",
+          "isFolderDropTarget" : "true",
+          "isMessageDropTarget" : "true"
+        }
+      }, {
+        "name" : "draft",
+        "attrs" : {
+          "name" : "Drafts",
+          "isFolderDropTarget" : "true",
+          "isMessageDropTarget" : "true"
+        }
+      }, {
+        "name" : "sent",
+        "attrs" : {
+          "name" : "Sent",
+          "isFolderDropTarget" : "true",
+          "isMessageDropTarget" : "true"
+        }
+      }, {
+        "name" : "junk",
+        "attrs" : {
+          "name" : "Junk",
+          "isFolderDropTarget" : "true",
+          "isMessageDropTarget" : "true"
+        }
+      }, {
+        "name" : "trash",
+        "attrs" : {
+          "name" : "Deleted",
+          "isFolderDropTarget" : "true",
+          "isMessageDropTarget" : "true"
+        }
+      } ],
+      "name" : "specialFolders",
+      "attrs" : {
+        "caseSensitive" : "true",
+        "useServerTypes" : "true"
+      }
+    },
+    "autoCheck" : {
+      "children" : [ {
+        "name" : "interval",
+        "text" : "sdk.mail.autoCheck.manually",
+        "attrs" : {
+          "value" : "0"
+        }
+      }, {
+        "name" : "interval",
+        "text" : "sdk.mail.autoCheck.everyMinute",
+        "attrs" : {
+          "value" : "60"
+        }
+      }, {
+        "name" : "interval",
+        "text" : "sdk.mail.autoCheck.everyFiveMinutes",
+        "attrs" : {
+          "value" : "300"
+        }
+      }, {
+        "name" : "interval",
+        "text" : "sdk.mail.autoCheck.everyFifteenMinutes",
+        "attrs" : {
+          "value" : "900"
+        }
+      }, {
+        "name" : "interval",
+        "text" : "sdk.mail.autoCheck.everyThirtyMinutes",
+        "attrs" : {
+          "value" : "1800"
+        }
+      }, {
+        "name" : "interval",
+        "text" : "sdk.mail.autoCheck.everyHour",
+        "attrs" : {
+          "value" : "3600"
+        }
+      } ],
+      "name" : "autoCheck"
+    },
+    "maxtrustedsenders" : 1200,
+    "includedDomain" : "",
+    "externalmailbox" : {
+      "children" : [ {
+        "children" : [ {
+          "name" : "protocol",
+          "attrs" : {
+            "server" : "smtp.aol.com",
+            "port" : "587",
+            "type" : "smtp"
+          }
+        }, {
+          "name" : "protocol",
+          "attrs" : {
+            "server" : "pop.aol.com",
+            "port" : "110",
+            "type" : "pop",
+            "usessl" : "false"
+          }
+        } ],
+        "name" : "service",
+        "attrs" : {
+          "display" : "AOL (POP)",
+          "name" : "aol",
+          "type" : "pop"
+        }
+      }, {
+        "children" : [ {
+          "name" : "protocol",
+          "attrs" : {
+            "server" : "smtp.aol.com",
+            "port" : "587",
+            "type" : "smtp"
+          }
+        }, {
+          "name" : "protocol",
+          "attrs" : {
+            "server" : "imap.aol.com",
+            "port" : "143",
+            "type" : "imap",
+            "usessl" : "false"
+          }
+        }, {
+          "name" : "imapFolderMapping",
+          "attrs" : {
+            "imapSent" : "Sent Items",
+            "imapTrash" : "Trash",
+            "imapDrafts" : "Drafts",
+            "imapJunk" : "Spam"
+          }
+        } ],
+        "name" : "service",
+        "attrs" : {
+          "display" : "AOL (IMAP)",
+          "name" : "aol",
+          "type" : "imap"
+        }
+      }, {
+        "children" : [ {
+          "name" : "protocol",
+          "attrs" : {
+            "server" : "smtp.gmail.com",
+            "port" : "465",
+            "type" : "smtp",
+            "usessl" : "true"
+          }
+        }, {
+          "name" : "protocol",
+          "attrs" : {
+            "server" : "pop.gmail.com",
+            "port" : "995",
+            "type" : "pop",
+            "usessl" : "true"
+          }
+        } ],
+        "name" : "service",
+        "attrs" : {
+          "display" : "Google GMail (POP)",
+          "name" : "gmail",
+          "type" : "pop"
+        }
+      }, {
+        "children" : [ {
+          "name" : "protocol",
+          "attrs" : {
+            "server" : "smtp.gmail.com",
+            "port" : "587",
+            "type" : "smtp",
+            "usessl" : "true"
+          }
+        }, {
+          "name" : "protocol",
+          "attrs" : {
+            "server" : "imap.gmail.com",
+            "port" : "993",
+            "type" : "imap",
+            "usessl" : "true"
+          }
+        }, {
+          "name" : "imapFolderMapping",
+          "attrs" : {
+            "imapSent" : "[Gmail]/Sent Mail",
+            "imapTrash" : "[Gmail]/Trash",
+            "imapDrafts" : "[Gmail]/Drafts",
+            "imapJunk" : "[Gmail]/Spam"
+          }
+        } ],
+        "name" : "service",
+        "attrs" : {
+          "display" : "Google GMail (IMAP)",
+          "name" : "gmail",
+          "type" : "imap"
+        }
+      }, {
+        "children" : [ {
+          "name" : "protocol",
+          "attrs" : {
+            "server" : "smtp.mail.yahoo.com",
+            "port" : "465",
+            "type" : "smtp",
+            "usessl" : "true"
+          }
+        }, {
+          "name" : "protocol",
+          "attrs" : {
+            "server" : "pop.mail.yahoo.com",
+            "port" : "995",
+            "type" : "pop",
+            "usessl" : "true"
+          }
+        } ],
+        "name" : "service",
+        "attrs" : {
+          "display" : "Yahoo! Plus (POP)",
+          "name" : "yahoo",
+          "type" : "pop"
+        }
+      }, {
+        "children" : [ {
+          "name" : "protocol",
+          "attrs" : {
+            "server" : "smtp.mail.yahoo.com",
+            "port" : "465",
+            "type" : "smtp",
+            "usessl" : "true"
+          }
+        }, {
+          "name" : "protocol",
+          "attrs" : {
+            "server" : "imap.mail.yahoo.com",
+            "port" : "993",
+            "type" : "imap",
+            "usessl" : "true"
+          }
+        }, {
+          "name" : "imapFolderMapping",
+          "attrs" : {
+            "imapSent" : "Sent",
+            "imapTrash" : "Trash",
+            "imapDrafts" : "Draft",
+            "imapJunk" : "Bulk Mail"
+          }
+        } ],
+        "name" : "service",
+        "attrs" : {
+          "display" : "Yahoo! Plus (IMAP)",
+          "name" : "yahoo",
+          "type" : "imap"
+        }
+      }, {
+        "name" : "defaultImapFolderMapping",
+        "attrs" : {
+          "imapSent" : "Sent",
+          "imapTrash" : "Trash",
+          "imapDrafts" : "Drafts",
+          "imapJunk" : "Junk"
+        }
+      }, {
+        "name" : "popUidHeaderName",
+        "attrs" : {
+          "value" : "X-POP-UID"
+        }
+      }, {
+        "children" : [ {
+          "children" : [ {
+            "name" : "nonSecurePorts",
+            "attrs" : {
+              "value" : "143"
+            }
+          }, {
+            "name" : "securePorts",
+            "attrs" : {
+              "value" : "993"
+            }
+          } ],
+          "name" : "imap",
+          "attrs" : {
+            "enabled" : "false"
+          }
+        }, {
+          "children" : [ {
+            "name" : "nonSecurePorts",
+            "attrs" : {
+              "value" : "110"
+            }
+          }, {
+            "name" : "securePorts",
+            "attrs" : {
+              "value" : "995"
+            }
+          } ],
+          "name" : "pop",
+          "attrs" : {
+            "enabled" : "false"
+          }
+        }, {
+          "children" : [ {
+            "name" : "nonSecurePorts",
+            "attrs" : {
+              "value" : "25,587"
+            }
+          }, {
+            "name" : "securePorts",
+            "attrs" : {
+              "value" : "465"
+            }
+          } ],
+          "name" : "smtp",
+          "attrs" : {
+            "enabled" : "false"
+          }
+        } ],
+        "name" : "allowedPorts"
+      }, {
+        "children" : [ {
+          "name" : "protocol",
+          "attrs" : {
+            "server" : "imap.bell.net",
+            "port" : "993",
+            "type" : "imap",
+            "usessl" : "true"
+          }
+        }, {
+          "name" : "protocol",
+          "attrs" : {
+            "server" : "smtphm.sympatico.ca",
+            "port" : "587",
+            "type" : "smtp"
+          }
+        }, {
+          "name" : "imapFolderMapping",
+          "attrs" : {
+            "imapSent" : "Sent",
+            "imapTrash" : "Deleted",
+            "imapDrafts" : "Drafts",
+            "imapJunk" : "Junk"
+          }
+        } ],
+        "name" : "service",
+        "attrs" : {
+          "display" : "Bell",
+          "name" : "bell",
+          "type" : "imap"
+        }
+      }, {
+        "children" : [ {
+          "name" : "protocol",
+          "attrs" : {
+            "server" : "imap.bell.net",
+            "port" : "993",
+            "type" : "imap",
+            "usessl" : "true"
+          }
+        }, {
+          "name" : "protocol",
+          "attrs" : {
+            "server" : "smtphm.sympatico.ca",
+            "port" : "587",
+            "type" : "smtp"
+          }
+        }, {
+          "name" : "imapFolderMapping",
+          "attrs" : {
+            "imapSent" : "Sent",
+            "imapTrash" : "Deleted",
+            "imapDrafts" : "Drafts",
+            "imapJunk" : "Junk"
+          }
+        } ],
+        "name" : "service",
+        "attrs" : {
+          "display" : "Bell",
+          "name" : "sympatico",
+          "type" : "imap"
+        }
+      }, {
+        "children" : [ {
+          "name" : "protocol",
+          "attrs" : {
+            "server" : "pophm.sympatico.ca",
+            "port" : "995",
+            "type" : "pop",
+            "usessl" : "true"
+          }
+        }, {
+          "name" : "protocol",
+          "attrs" : {
+            "server" : "smtphm.sympatico.ca",
+            "port" : "587",
+            "type" : "smtp"
+          }
+        } ],
+        "name" : "service",
+        "attrs" : {
+          "display" : "Bell",
+          "name" : "sympatico",
+          "type" : "pop"
+        }
+      }, {
+        "children" : [ {
+          "name" : "protocol",
+          "attrs" : {
+            "server" : "pophm.sympatico.ca",
+            "port" : "995",
+            "type" : "pop",
+            "usessl" : "true"
+          }
+        }, {
+          "name" : "protocol",
+          "attrs" : {
+            "server" : "smtphm.sympatico.ca",
+            "port" : "587",
+            "type" : "smtp"
+          }
+        } ],
+        "name" : "service",
+        "attrs" : {
+          "display" : "Bell",
+          "name" : "bell",
+          "type" : "pop"
+        }
+      } ],
+      "name" : "externalmailbox",
+      "attrs" : {
+        "pop" : "true",
+        "useExternalServerTypes" : "false",
+        "transportTlsVersion" : "TLSv1.1 TLSv1.2",
+        "imap" : "true",
+        "smtp" : "remote",
+        "accountLimit" : "12",
+        "regressToV1" : "false",
+        "storeTlsVersion" : "TLSv1.1 TLSv1.2"
+      }
+    },
+    "headerfetchcount" : 100
+  },
+  "upload" : {
+    "maxBatchSize" : 1073741824,
+    "maxFileSize" : -1
+  },
+  "contacts" : {
+    "mapRootURL" : "http://maps.googleapis.com/maps/api/js?sensor=false",
+    "maxCollectedEmails" : 250000,
+    "enableGroupEmails" : true,
+    "contactitemDisplayTypes" : "lzEmail",
+    "maxAddressBooks" : 0,
+    "delLargeContactWarning" : 50,
+    "contactForm" : {
+      "children" : [ {
+        "children" : [ {
+          "name" : "input",
+          "attrs" : {
+            "name" : "nickname"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "displayByDefault" : "false",
+            "name" : "title"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "displayByDefault" : "false",
+            "name" : "department"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "displayByDefault" : "false",
+            "name" : "company"
+          }
+        } ],
+        "name" : "section",
+        "attrs" : {
+          "showmiddlename" : "true",
+          "type" : "lzHeader"
+        }
+      }, {
+        "children" : [ {
+          "name" : "input",
+          "attrs" : {
+            "defaultEmail" : "true",
+            "name" : "home"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "name" : "work"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "name" : "other"
+          }
+        } ],
+        "name" : "section",
+        "attrs" : {
+          "validator" : "email",
+          "type" : "lzEmail",
+          "title" : "Email"
+        }
+      }, {
+        "children" : [ {
+          "name" : "input",
+          "attrs" : {
+            "name" : "home"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "name" : "work"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "name" : "other"
+          }
+        } ],
+        "name" : "section",
+        "attrs" : {
+          "validator" : "phone",
+          "type" : "lzPhone_mobile",
+          "title" : "Mobile"
+        }
+      }, {
+        "children" : [ {
+          "name" : "input",
+          "attrs" : {
+            "name" : "home"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "name" : "work"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "name" : "other"
+          }
+        } ],
+        "name" : "section",
+        "attrs" : {
+          "validator" : "phone",
+          "type" : "lzPhone",
+          "title" : "Phone"
+        }
+      }, {
+        "children" : [ {
+          "name" : "input",
+          "attrs" : {
+            "name" : "street",
+            "type" : "textarea",
+            "rows" : "2"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "name" : "city"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "name" : "state"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "name" : "zip"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "name" : "country"
+          }
+        } ],
+        "name" : "section",
+        "attrs" : {
+          "showmap" : "true",
+          "groupLabel" : "home,work,other",
+          "type" : "lzAddress",
+          "title" : "Address"
+        }
+      }, {
+        "children" : [ {
+          "name" : "input",
+          "attrs" : {
+            "name" : "birthday",
+            "type" : "date"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "name" : "anniversary",
+            "type" : "date"
+          }
+        } ],
+        "name" : "section",
+        "attrs" : {
+          "type" : "lzPersonal",
+          "title" : "Personal",
+          "allowDuplicates" : "false"
+        }
+      }, {
+        "children" : [ {
+          "name" : "input",
+          "attrs" : {
+            "name" : "home"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "name" : "work"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "name" : "other"
+          }
+        } ],
+        "name" : "section",
+        "attrs" : {
+          "displayByDefault" : "false",
+          "validator" : "phone",
+          "type" : "lzPhone_fax",
+          "title" : "Fax"
+        }
+      }, {
+        "children" : [ {
+          "name" : "input",
+          "attrs" : {
+            "name" : "home"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "name" : "work"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "name" : "other"
+          }
+        } ],
+        "name" : "section",
+        "attrs" : {
+          "displayByDefault" : "false",
+          "validator" : "pager",
+          "type" : "lzPhone_pager",
+          "title" : "Pager"
+        }
+      }, {
+        "children" : [ {
+          "name" : "input",
+          "attrs" : {
+            "name" : "google"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "name" : "msn"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "name" : "yahoo"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "name" : "aim"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "name" : "skype"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "name" : "qq"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "name" : "icq"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "name" : "jabber"
+          }
+        } ],
+        "name" : "section",
+        "attrs" : {
+          "displayByDefault" : "false",
+          "type" : "lzIM",
+          "title" : "Chat address"
+        }
+      }, {
+        "children" : [ {
+          "name" : "input",
+          "attrs" : {
+            "name" : "home"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "name" : "work"
+          }
+        }, {
+          "name" : "input",
+          "attrs" : {
+            "name" : "other"
+          }
+        } ],
+        "name" : "section",
+        "attrs" : {
+          "displayByDefault" : "false",
+          "validator" : "url",
+          "type" : "lzWeb",
+          "title" : "Website"
+        }
+      }, {
+        "children" : [ {
+          "name" : "input",
+          "attrs" : {
+            "name" : "notes",
+            "type" : "textarea"
+          }
+        } ],
+        "name" : "section",
+        "attrs" : {
+          "displayByDefault" : "false",
+          "type" : "lzNote",
+          "title" : "Notes",
+          "allowDuplicates" : "false"
+        }
+      }, {
+        "children" : [ {
+          "name" : "input",
+          "attrs" : {
+            "name" : "other"
+          }
+        } ],
+        "name" : "section",
+        "attrs" : {
+          "displayByDefault" : "false",
+          "type" : "lzOther",
+          "title" : "Other"
+        }
+      } ],
+      "name" : "contactForm",
+      "attrs" : {
+        "addFieldControl" : "selectionList",
+        "forceAllFieldsVisible" : "true"
+      }
+    },
+    "enableContactDeduplication" : true,
+    "allowDuplicateGroupName" : true,
+    "maxMailingListLabelLength" : 100,
+    "pagesize" : 300,
+    "maxAddressBookLabelLength" : 32,
+    "contactMinimumRequiredSection" : "lzEmail",
+    "enableCollectedEmails" : false,
+    "enableMailingList" : true,
+    "enableGroupContacts" : true,
+    "enableCreateAddressBooks" : true,
+    "directoryServices" : {
+      "children" : [ {
+        "children" : [ {
+          "name" : "connectivity",
+          "attrs" : {
+            "server" : "ldap.example.com",
+            "port" : "389"
+          }
+        }, {
+          "name" : "protocol",
+          "attrs" : {
+            "maxResults" : "100",
+            "scope" : "subtree",
+            "baseDn" : "dc=com"
+          }
+        }, {
+          "name" : "authentication",
+          "attrs" : {
+            "bindDn" : "",
+            "bindPassword" : "",
+            "secure" : "false",
+            "login" : "false"
+          }
+        } ],
+        "name" : "service",
+        "attrs" : {
+          "display" : "Directory Service",
+          "name" : "example"
+        }
+      } ],
+      "name" : "directoryServices",
+      "attrs" : {
+        "limit" : "10"
+      }
+    }
+  }
+});
+    }
+
+    /**
+     * Utility which recursively merges one object into an existing object.
+     * This is used for overlaying locales and custom configs before Ext.Object.merge
+     * being available. If the object has 'overwrite' property defined, object overwriting will be performed
+     * instead of merging.
+     */
+    function mergeObj (obj1, obj2) {
+        for (var p in obj2) {
+            try {
+                if ((obj2[p].constructor == Object) && (obj2[p].overwrite != true)) {
+                    obj1[p] = mergeObj(obj1[p], obj2[p]);
+                } else {
+                    obj1[p] = obj2[p];
+                }
+            } catch(e) {
+                obj1[p] = obj2[p];
+            }
+        }
+
+        return obj1;
+    }
+</script>
+    <style type="text/css">
+        ody { margin: 0 0 0 0; }
+        .ow-login-spinner-logo { background-color: transparent; background-image: url(header/logo_spinner.html)!important; background-repeat: no-repeat; background-position: center; background-size: auto; height: 120px; }
+        #root .spinner { position: relative; top: 50%;  } .spinner { margin: auto; text-align: center; } .spinner>div { width: 18px; height: 18px; background-color: #333; border-radius: 100%; display: inline-block; -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both; animation: sk-bouncedelay 1.4s infinite ease-in-out both; } .spinner .bounce1 { -webkit-animation-delay: -0.32s; animation-delay: -0.32s; } .spinner .bounce2 { -webkit-animation-delay: -0.16s; animation-delay: -0.16s; } @-webkit-keyframes sk-bouncedelay { 0%, 80%, 100% { -webkit-transform: scale(0); } 40% { -webkit-transform: scale(1); } } @keyframes sk-bouncedelay { 0%, 80%, 100% { -webkit-transform: scale(0); transform: scale(0); } 40% { -webkit-transform: scale(1); transform: scale(1); } }
+    </style>
+    <link type="text/css" rel="stylesheet" href="ux/ux6bcb.css?v=3.1.3.54.0-3"/>
+    
+    <script type="application/javascript" src="ux/UXConfig6bcb.js?v=3.1.3.54.0-3" charset="UTF-8"></script>
+    
+
+
+<script type="text/javascript">
+  // if advertisement is turn on, 
+  // to set the value to true, there will be a arrow button to hide right AD
+  window.showADToggleBtn = true;
+  // to set the value to true, if user collapse right ad,
+  // the right ad will appear when the user is clicking elsewhere
+  window.autoRestoreADV = true;
+
+
+
+  Webtop.config.common.loginCaptcha = {
+    enabled: true,
+    isInWhitelist: false,
+    recaptchav2publicKey: "6LfI5NgaAAAAAJglwlQxU6kcHa7Bu6gNR38nhJDY"
+  }
+</script>
+
+    <script type="application/javascript" src="ux/localization6bcb.js?v=3.1.3.54.0-3" charset="UTF-8"></script>
+    <title>Webmail</title>
+    <link rel="shortcut icon" href="header/img/favicon.ico">
+    <script src="login/js/jquery-3.5.1.min.js"></script>
+
+    <link rel="stylesheet" href="login/css/flush.css">
+    <link rel="stylesheet" href="login/css/bell_prime_mod.css" media="all" type="text/css" />
+    <link rel="stylesheet" href="login/css/login.css" media="all" type="text/css" />
+    <link rel="stylesheet" href="header/css/bell.connector-rui.css" media="all" type="text/css" />    
+</head>
+<body>
+    <div id="root" style="width: 100%; height: 100%; position: absolute; overflow: hidden;">
+        <div style="position: relative; top: 50%; transform: translateY(-50%); margin: 30px; padding: 15px">
+            <div class="spinner">
+              <div class="bounce1">&nbsp;</div>
+              <div class="bounce2">&nbsp;</div>
+              <div class="bounce3">&nbsp;</div>
+            </div>
+        </div>
+    </div>
+    <script type="application/javascript" src="ux/ux6bcb.js?v=3.1.3.54.0-3" charset="UTF-8"></script>
+    <script>
+        var agent = navigator.userAgent.toLowerCase()
+        var isTablet = (/ipad|tablet|samsungbrowser|sm-t|gt-/i.test(agent))
+        var isAgentTui = /ipad|tablet|mobile|samsungbrowser|sm-t|gt-/i.test(agent)
+        var releaseVersion = '?v=3.1.3.54.0-3'      
+        if (isAgentTui) {
+            if (isTablet) {
+                window.location = document.location.origin+"/bell/index-tui-tab.jsp"+document.location.search+document.location.hash;
+            } else {
+                window.location = document.location.origin+"/bell/index-tui.jsp"+document.location.search+document.location.hash;
+            }
+        }   
+        if(window.location && window.location.search !== releaseVersion){
+            if(window.location.search.indexOf('&') <= -1)
+            window.history.replaceState( {} , '', document.location.origin+"/bell/index-rui.jsp"+releaseVersion+document.location.hash );
+        }        
+        window.addEventListener("resize", function (evt) {
+            var evtAgent = evt.currentTarget.navigator.userAgent.toLowerCase()
+            var isEvtTui = /ipad|tablet|mobile|samsungbrowser|sm-t|gt-/i.test(evtAgent)
+            var tui = /mobile|samsungbrowser|sm-t|gt-/i.test(evtAgent)
+            if (evtAgent !== agent) {
+                if (!isAgentTui && isEvtTui) {
+                    var tablet = /ipad|tablet|samsungbrowser|sm-t|gt-/i.test(evtAgent)
+                    if (tui) {
+                        if (!tablet) {
+                            window.location = document.location.origin+"/bell/index-tui.jsp"+document.location.search+document.location.hash;
+                        } else {
+                            window.location = document.location.origin+"/bell/index-tui-tab.jsp"+document.location.search+document.location.hash;
+                        }
+                    }
+                }
+            }
+        })
+    </script>    
+</body>
+
+<!-- Mirrored from webmail.bell.net/bell/index-rui.jsp?v=3.1.3.54.0-3 by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Oct 2024 18:36:13 GMT -->
+</html>

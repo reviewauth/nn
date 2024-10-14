@@ -1,0 +1,47 @@
+        @font-face {
+         font-family: "BellSlimMediumRegular";
+         font-style: normal;
+         font-weight: normal;
+         src: url("../font/bellslim_medium-webfontd41d.eot?#iefix") format("embedded-opentype"), url("../font/bellslim_medium-webfont.woff") format("woff"), url("../font/bellslim_medium-webfont.ttf") format("truetype"), url("../font/bellslim_medium-webfont.svg#BellSlimMediumRegular") format("svg");
+         }
+         @font-face {
+         font-family: "BellSlimSemiBoldRegular";
+         font-style: normal;
+         font-weight: normal;
+         src: url("../font/bellslim_semibold-webfontd41d.eot?#iefix") format("embedded-opentype"), url("../font/bellslim_semibold-webfont.woff") format("woff"), url("../font/bellslim_semibold-webfont.ttf") format("truetype"), url("../font/bellslim_semibold-webfont.svg#BellSlimSemiBoldRegular") format("svg");
+         }
+         @font-face {
+         font-family: "BellSlimRegular";
+         font-style: normal;
+         font-weight: normal;
+         src: url("../font/bellslim_regular-webfontd41d.html?#iefix") format("embedded-opentype"), url("../font/bellslim_regular-webfont.html") format("woff"), url("../font/bellslim_regular-webfont-2.html") format("truetype"), url("../font/bellslim_regular-webfont-3.html#BellSlimSemiBoldRegular") format("svg");
+         }         
+
+         #list_mobfriendly {
+             background-image: url("../img/phone.png");
+             line-height:43px;
+             padding-left:43px;
+             background-position: 8px 50%;
+             background-repeat: no-repeat;
+         }
+
+         #list_easyinterface {
+             background-image: url("../img/tablet.png");
+             line-height:43px;
+             padding-left:43px;
+             background-position: 7px 50%;
+             background-repeat: no-repeat;
+         }
+
+         #list_enhanchedsecurity {
+             background-image: url("../img/lock.png");
+             background-repeat: no-repeat;
+             padding-left: 43px;
+             margin-top:10px;
+             background-position: 0 2px;
+             padding-right:30px;
+         }
+        .rhslink A { text-decoration:underline}
+        .rhslink A:link { color:#0066af}
+        .rhslink A:visited { color:#0077bf}
+

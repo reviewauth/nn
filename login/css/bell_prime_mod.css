@@ -1,0 +1,322 @@
+.pgTitle h1 {
+    width: 740px;
+}
+
+.cHead h2, .cHead h3, .cHead h4, .cHeader h2, .cHeader h3, .cHeader h4 {
+    margin-bottom: 0;
+}
+
+.cBox, .vTabsThemeA .tabContSet {
+    background: none repeat scroll 0 0 #FFFFFF;
+    margin-bottom: 20px;
+    min-height: 22px;
+    padding-bottom: 24px;
+    padding-top: 24px;
+    position: relative;
+}
+.cBox .cHead, .cBox .cHeader {
+    background: url("../img/bg_gradRibbon.gif") repeat-x scroll left bottom #FFFFFF;
+    margin-bottom: 24px;
+    margin-top: -24px;
+    padding-bottom: 15px;
+    padding-top: 19px;
+    position: relative;
+}
+
+.cBoxExtra1, .vTabsThemeA .tabContSet .cBoxExtra1 {
+    background: none repeat scroll 0 0 #D6D6D6;
+    height: 100%;
+    left: 0;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    width: 2px;
+    z-index: 1;
+}
+
+.cBoxExtra2, .vTabsThemeA .tabContSet .cBoxExtra2 {
+    background: none repeat scroll 0 0 #D6D6D6;
+    height: 100%;
+    min-height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 2px;
+    z-index: 1;
+}
+
+.cBoxExtra3, .vTabsThemeA .tabContSet .cBoxExtra3 {
+    background: url("../img/bg_cBoxExtra.png") no-repeat scroll right top transparent;
+    height: 12px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+
+.cBoxExtra4, .vTabsThemeA .tabContSet .cBoxExtra4 {
+    background: url("../img/bg_cBoxExtra.png") no-repeat scroll left top transparent;
+    height: 12px;
+    left: 0;
+    margin-right: 12px;
+    position: relative;
+    top: 0;
+    z-index: 1;
+}
+
+.cBoxExtra5, .vTabsThemeA .tabContSet .cBoxExtra5 {
+    background: url("../img/bg_cBoxExtra.png") no-repeat scroll right bottom transparent;
+    bottom: 0;
+    height: 17px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+.cBoxExtra6, .vTabsThemeA .tabContSet .cBoxExtra6 {
+    background: url("../img/bg_cBoxExtra.png") no-repeat scroll left bottom transparent;
+    bottom: 0;
+    height: 17px;
+    left: 0;
+    margin-right: 17px;
+    position: relative;
+    z-index: 2;
+}
+
+
+.hType1,.headingType1,.hType2,.headingType2,.hType3,.headingType3,.hType4,.headingType4,.hType5,.headingType5 {color: #212121;}
+
+
+.hType1,.headingType1 {
+font-size: 2.5em/*30px*/;line-height: 1em;
+margin-bottom: 0.4em;
+}
+
+.txtRep, .fontFace {letter-spacing: -1px;}
+
+.hType2,.headingType2 {
+font-size: 2em/*24px*/;line-height: 1em;
+margin-bottom: 0.333em;
+}
+
+.hType3,.headingType3 {
+font-size: 1.5em/*18px*/;line-height: 1.2em;
+margin-bottom: 0.416em; /* was 0.277em */
+}
+
+.hType4,.headingType4 {
+font-size: 1.166em/*14px*/;line-height: 1.2em;
+margin-bottom: 0.285em; color: #212121;
+}
+
+.hType5,.headingType5 {
+font-size: 1em/*12px*/;line-height: 1.3em;
+margin-bottom: 0.333em;
+}
+
+.sTitle, .headingThemeA, .headingThemeC {
+padding-bottom: 6px;
+margin-bottom: 20px;
+border-bottom: 1px solid #d6d6d6;
+position: relative;
+}
+.headingThemeB, .headingThemeC {color: #0066A4;}
+.headingThemeC {border-color: #ddd;}
+	.headingThemeC em, .headingThemeB small, .headingThemeC small {display: block; font-size: 12px; color: #212121; margin-top: 3px;}
+.headingThemeD {margin-bottom: 1em;}
+.headingThemeE {margin-bottom: 0;}
+.headingThemeF {border-bottom: 1px solid #EDEDED; margin-bottom: 5px; padding-bottom: 5px;}
+.headingThemeG {background: url(../common/all_languages/all_regions/skin/bg_headingThemeG.html) repeat-x left bottom transparent; padding-bottom: 10px; margin-bottom: 1em;}
+
+.headingAside {display: block; font-size: 12px; line-height: normal; margin-top: 5px; letter-spacing: 0; font-family: Helvetica, Arial, sans-serif;}
+.toolTip .headingAside {margin-left: 4px;}
+
+.pgTitle h1 {line-height: 1.2em;}
+.txtRep, .fontFace {font-family: "BellSlimSemiBoldRegular", Helvetica, Arial, sans-serif;}
+
+/* headingWrap - used to wrap any element with a heading, wrapped elements should be placed inside a "headingAside" */
+.headingWrap {position: relative;}
+	.pgTitle .headingWrap h1 {width: auto !important;}
+	.headingWrap .headingAside {position: relative; margin-top: 0;}
+.headingWrap h1, .headingWrap h2, .headingWrap h3, .headingWrap h4, .headingWrap h5, .headingWrap h6 {float: left; width: auto; margin-right: 10px;}
+.headingWrap, .headingWrap .headingAside, .headingWrap .moreLink {float: left;}
+
+
+
+
+/*:: =Utility ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+/* Clear after a float (use on div or span)*/
+.clearer {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	width: 0;height: 0;
+	line-height: 0;
+}
+
+/* Position content outside the viewport so it can be accessed by screenreader users */
+/* For IE6, always use "top" instead of "left". Performance with "left" is lacking. */
+.accessAlt, .offScreen {position: absolute !important;left: -999em !important;top: -999em !important;}
+.noJs .accessAlt, .noJs .offScreen {position: static !important; left: auto !important; top: auto !important;}
+
+/* Give emphasis */
+.accent {font-weight: bold;}
+
+/* Reduce emphasis */
+.unaccent, .capsule label small {font-size: 11px;}
+
+/* pipeSpacer - List items separated by a light grey border */
+ul.pipeSpacer {float: left; position: relative;}
+	ul.pipeSpacer li {float: left;background: none transparent;padding: 1px 10px 0 0;margin: 0 10px 5px 0;border-right: 1px solid #ccc;}
+		ul.pipeSpacer li.last {border: 0 none;margin-right: 0;padding-right: 0;}
+	.pgTitleOptions ul.pipeSpacer li {margin-bottom: 0;}
+	
+/* pipeSpacerThemeA - splitted in two sections (left/right); This is not a seamless theme change, it requires markup change to match the theme */
+.pipeSpacerThemeA, .footer .pipeSpacerThemeA {border-right: 1px solid #CCCCCC; padding-right: 12px; margin-bottom: 0;}
+	.pipeSpacerThemeA li, .footer .pipeSpacerThemeA li {background-image: none; padding-left: 0; white-space: normal; float: none; margin-right: 0; border: 0;}
+	.last .pipeSpacerThemeA, .footer .last .pipeSpacerThemeA {border-right: 0; margin-right: 0; padding-right: 0;}
+
+/* Default toggle widget */
+.tgl,.tgl:hover, .toggle,.toggle:hover {text-decoration: none;}
+	.tgl, .toggle {display: inline-block;margin-bottom: 21px;padding-right: 25px;background: url(../common/all_languages/all_regions/skin/bg_iconSprite.html) no-repeat right -479px transparent;}
+		.tglOpen, .toggleOpen  {margin-bottom: 0;background-position: right -519px;}
+	.tglCont, .toggleContent {margin: 21px 0;}
+	
+	/* toggleThemeA - see master.css */
+	/* toggleThemeB */
+	.toggleThemeB {background-position: left -320px; line-height: 1.2em; padding-left: 22px; padding-right: 0;}
+	.toggleThemeBOpen {background-position: left -360px; position: relative; z-index: 1;}
+	/* toggleThemeC - removes +/- icon */
+	.toggleThemeC, .toggleThemeCOpen {background: none;}
+		.toggleThemeC:hover {text-decoration: underline;}
+	
+	/* per-context */
+	.headingThemeD .toggle {position: absolute; right: 0px; padding-right: 0px; margin-right: 8px; top: 6px; height: 17px; width: 100%; z-index: 3;}
+	.dataList li .sectionHeader .toggle {top: 0; margin-right: 0;}
+	
+		
+
+
+	
+/*:: =Grid system  ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+/* colGroup a.k.a refLine (deprecated) */
+.refLine, .colGroup {overflow: hidden;position: relative;width: 100%;float: left;clear: both;}
+
+.col1,.col2,.col3,.col4,.col5,
+.col6,.col7,.col8,.col9,.col10,
+.col11,.col12 {position: relative;float: left;display: inline;margin-right: 13px;}
+
+.col1 {width: 66px;}
+.col2 {width: 145px;}
+.col3 {width: 224px;}
+.col4 {width: 303px;}
+.col5 {width: 382px;}
+.col6 {width: 461px;}
+.col7 {width: 540px;}
+.col8 {width: 619px;}
+.col9 {width: 698px;}
+.col10 {width: 777px;}
+.col11 {width: 856px;}
+.col12 {width: 935px;}
+
+.colThemeA {background-color:#f5f5f5;}
+
+.colEmpty {height: 1px;visibility: hidden;}
+.colLast {margin-right: 0 !important;border-right: 0;}
+
+.colGroupThemeA {border-top:solid 1px #e2e2e2;}
+.colGroupThemeB {border-bottom:solid 1px #e2e2e2; padding-bottom: 21px;}
+
+.lbContent .colGroup {width: auto;}
+		
+/*:: =Structure ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+.wrapper {position: relative;width: 975px;margin: 0 auto;}
+	.wrapHeader {padding-top: 15px;position: relative;z-index: 2;}
+	.wrapMain {margin-bottom: 30px;position: relative;z-index: 1;}
+	.wrapFooter {position: relative;}
+
+.subWrap {padding: 0;}
+	.header {position: relative;}
+	.main {position: relative;}
+		.mainExtra1,.mainExtra2 {width: 2px;height: 100%;position: absolute;top: 0;background-color: #dcdcdc;}
+		.mainExtra1 {left: 0;}.mainExtra2 {right: 0;}
+		.mainExtra3,.mainExtra4 {width: 100%;line-height: 0;position: absolute;left: 0;background: url(../img/bg_mainExtra.gif) left top no-repeat transparent;}
+		.mainExtra3 {height:7px;top: 0;}.mainExtra4 {height: 7px;background-position: left bottom;position: relative;margin-bottom: -7px;margin-top: -7px;}	
+	.footer {position: relative;display: block;}
+
+.cWrap {padding: 24px 20px 4px;border-bottom: 1px solid #dcdcdc;}
+.cWrapAlt, .cWrapThemeA {padding-top: 30px;padding-bottom: 30px;background-color: #fff;border-bottom: 0;}
+.cWrapInsert, .cWrapThemeB {padding-bottom: 0;border: 0 none;}
+.cWrapThemeC {padding: 24px 0 0 0;}
+
+.pgTitle {
+    background: url("../img/bg_transparent.gif") repeat scroll 0 0 transparent;
+    border: 0 none;
+    margin-bottom: -15px;
+    padding-bottom: 0;
+    position: relative;
+    z-index: 5;
+}
+
+
+
+.content {background: #f2f2f2;}
+
+.lining, .padder {padding: 0 21px;position: relative;}
+	.padderThemeA {padding-left:0;}
+	.padderThemeB {padding-right:0;}
+	.padderThemeC {padding: 0 21px !important;} /* left/right only */
+	.padderThemeD {padding-top:0 !important;}
+	.padderThemeE {padding-bottom:0 !important;}
+	.padderThemeF {padding: 21px 0 !important;} /* top/bottom only */
+	.padderThemeG {padding: 0 !important;}
+	.padderThemeH {padding: 21px;}
+	.padderThemeI {padding: 21px 0 0 0 !important;} /* top only */
+	.padderThemeJ {padding: 0 0 21px 0 !important;} /* bottom only */
+	.padderThemeK {padding-left: 10px;}
+	.padderThemeL {padding-right: 10px;}
+	.padderThemeM {padding-top: 10px;}
+	.padderThemeN {padding-bottom: 10px;}
+	.padderThemeO {padding: 0 10px;}
+	.padderThemeP {padding: 10px 0;}
+	.padderThemeQ {padding: 0 21px 21px 9px !important;} /* right/bottom only */
+	.padderThemeR {padding: 0 0 21px 21px !important;} /* left/bottom only */
+	.padderThemeS {padding: 21px 21px 0 0 !important;} /* right/top only */
+	.padderThemeT {padding: 21px 0 0 21px !important;} /* left/top only */
+
+/*:: =Footer ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+.flyOutFooter {color: #212121;display: block;min-height: 1.33em;padding: 7px 10px 5px;border-top: 1px solid #d6d6d6;border-bottom: 1px solid #d6d6d6;}
+.flyOutFooter.first {border-top: 0;padding-top: 3px;}
+.flyOutFooter a {color: #0066A4 !important;}
+
+/* flyOutThemeA */
+	.flyOutThemeA .flyOutFooter a {font-size: 1em;}
+	.flyOutThemeA .flyOutFooter {border-top: 1px solid #d6d6d6; border-bottom: 0; padding-bottom: 1px;}
+
+
+.superFooter .shell {padding: 30px 19px 18px;}
+	.superFooter .hType4, .superFooter .headingType4 {margin-bottom: 10px;}
+	.superFooter .fTxt, .superFooter .formText {margin-bottom: 10px;}
+	.superFooter .fTxt input, .superFooter .formText input {width: 12em;background-color: #fff;}
+	
+.footer .lining, .footer .padder {padding: 0;}
+.footer .pipeSpacer {display: block;}
+.footer .pipeSpacer li {white-space: nowrap;}
+.footer .unaccent {color: #999;}
+
+/* per-context */
+.footer .multiColumn  {float: left; margin-bottom: 1em;} /* ### evaluate if not too generic (3:45 PM 6/27/2012) */
+.footer .socialMedia {float: right;}
+.footer .socialMedia li {float: left; background: none; padding-left: 0; padding-right: 0; margin-left: 4px; margin-right: 0;}
+	.footer .socialMedia .first {margin: 10px 6px 0 0;}
+
+
+
+
